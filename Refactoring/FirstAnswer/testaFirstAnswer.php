@@ -6,11 +6,11 @@
  * 
  * LAUS DEO
  */
-// inicia um sessao
+// inicia uma sessao
 session_start();
 $_SESSION['loggedin'] = true;
 
-// seta um Cookie para o Browser (sera destruido ao finalizar o browser)
+// seta o Cookie para o Browser (sera destruido ao finalizar o browser)
 setcookie('Loggedin', true);
 
 // arquivo a ser testado
