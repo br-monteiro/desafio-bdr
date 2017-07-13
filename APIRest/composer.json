@@ -1,0 +1,26 @@
+{
+    "name":"phbsis/desafio-bdr",
+    "description":"API Rest do Desafio BDR",
+    "homepage": "https://github.com/br-monteiro/desafio-bdr/",
+    "type": "project",
+    "license": "GNU",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Edson B. S. Monteiro",
+            "email": "bruno.monteirodg@gmail.com"
+        }
+    ],
+    "require": {
+        "philo/laravel-blade": "3.*"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\" : "core/",
+            "App\\" : "./App/"
+        }
+    }
+}

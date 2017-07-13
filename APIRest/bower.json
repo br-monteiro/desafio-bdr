@@ -1,0 +1,29 @@
+{
+    "name": "APIRest",
+    "version": "1.0.0",
+    "main": "path/to/main.css",
+    "homepage": "https://github.com/br-monteiro/desafio-bdr",
+    "authors": [
+        "Bruno Monteiro - <bruno.monteirodg@gmail.com>"
+    ],
+    "description": "API Rest do Desafio BDR",
+    "main": "pulic/index.php",
+    "keywords": [
+        "controle",
+        "tarefas",
+        "tasks"
+    ],
+    "license": "GNU",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "~1.5.7",
+        "materialize": "^0.97.8"
+  }
+}
