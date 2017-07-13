@@ -37,6 +37,7 @@ class Route
         $this->routeMap->rotaPost(array(cfg::PREFIX_ROUTE . '/auth', 'AuthController@login', array()));
 
         $this->routeMap->rotaGet(array(cfg::PREFIX_ROUTE . '/tasks', 'TasksController@index', array()));
+        $this->routeMap->rotaGet(array(cfg::PREFIX_ROUTE . '/tasks/all', 'TasksController@listAll', array()));
         $this->routeMap->rotaGet(array(cfg::PREFIX_ROUTE . '/tasks/user/{id}', 'TasksController@tasksByUser', array(
                 'id' => '/\d+/'
         )));
@@ -51,7 +52,7 @@ class Route
                 'id' => '/\d+/'
         )));
         
-        $this->routeMap->rotaGet(array(cfg::PREFIX_ROUTE . '/status/all', 'StatusController@index', array()));
+        $this->routeMap->rotaGet(array(cfg::PREFIX_ROUTE . '/status/all', 'StatusController@listAll', array()));
         
         $this->routeMap->rotaGet(array(cfg::PREFIX_ROUTE . '/stats/{id}', 'EnderecosController@statsPorId', array(
                 'id' => '/\d+/'
