@@ -53,10 +53,6 @@ class Route
         )));
         
         $this->routeMap->rotaGet(array(cfg::PREFIX_ROUTE . '/status/all', 'StatusController@listAll', array()));
-        
-        $this->routeMap->rotaGet(array(cfg::PREFIX_ROUTE . '/stats/{id}', 'EnderecosController@statsPorId', array(
-                'id' => '/\d+/'
-        )));
     }
 
     /**
