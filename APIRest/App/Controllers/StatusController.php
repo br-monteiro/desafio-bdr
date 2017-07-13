@@ -25,6 +25,11 @@ class StatusController extends AbstractController implements ControllerInterface
 
     public function index()
     {
+        $this->listAll();
+    }
+    
+    public function listAll()
+    {
         $this->statusModel->returnAllStatus();
     }
 }
