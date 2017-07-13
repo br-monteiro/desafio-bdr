@@ -16,6 +16,6 @@ class ConfigApp
     // diretprios de cache das paginas
     const CACHE_DIR = '../App/cache/';
     // prefixo usado nas rotas
-    const PREFIX_ROUTE = '/APIRest/public';
+    const PREFIX_ROUTE = null;
 
 }
