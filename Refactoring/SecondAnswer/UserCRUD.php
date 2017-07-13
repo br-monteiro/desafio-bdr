@@ -26,12 +26,10 @@ class UserCRUD extends Database
      */
     public function returnAllByName()
     {
-        $sqlQuery = "SELECT name FROM {$this->entity};";
+        $sqlQuery = "SELECT name FROM {$this->entity} ORDER BY name ASC;";
         
         $result = $this->execute($sqlQuery);
-        
-        sort($result);
-        
+
         return $result;
     }
 }
