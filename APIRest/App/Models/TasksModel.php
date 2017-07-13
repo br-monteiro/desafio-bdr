@@ -36,6 +36,17 @@ class TasksModel extends ModelAbstract
         $this->contentTypeJSON()->toJson($result);
     }
 
+    public function returnAllTasks()
+    {
+        $stmt = $this->pdo()->prepare("SELECT tsk.*, st.color, st.nome AS status_nome, st.icon "
+            . " FROM {$this->entidade} AS tsk "
+            . " INNER JOIN status AS st ON st.id = tsk.status_id "
+            . " ORDER BY tsk.status_id, tsk.priority ASC");
+        $stmt->execute();
+        $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        $this->contentTypeJSON()->toJson($result);
+    }
+
     public function removeTaskById($userId)
     {
         $stmt = $this->pdo()->prepare("DELETE FROM  {$this->entidade} WHERE id = ? ");
