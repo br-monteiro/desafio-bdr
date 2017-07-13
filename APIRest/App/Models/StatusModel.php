@@ -4,7 +4,7 @@
  * 
  * LAUS DEO
  * 
- * Model de Usuarios
+ * Model de Status
  */
 namespace App\Models;
 
