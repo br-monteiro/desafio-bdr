@@ -4,7 +4,7 @@
  * 
  * LAUS DEO
  * 
- * Model de Usuarios
+ * Model de Tarefas
  */
 namespace App\Models;
 
@@ -66,7 +66,7 @@ class TasksModel extends ModelAbstract
         $stmt = $this->pdo()->prepare("INSERT INTO {$this->entidade} (`id`, `title`, `description`, `priority`, `created_at`, `users_id`, `status_id`) "
             . "VALUES (:id, :title, :description, :priority, " . time() . ", :users_id, :status_id);");
         if ($stmt->execute($dados)) {
-            $this->header->setHttpHeader(200);
+            $this->header->setHttpHeader(201);
             return true;
         }
 
