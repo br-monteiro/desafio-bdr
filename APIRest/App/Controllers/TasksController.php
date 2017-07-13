@@ -49,4 +49,9 @@ class TasksController extends AbstractController implements ControllerInterface
     {
         $this->tasksModel->editTask();
     }
+    
+    public function listAll()
+    {
+        $this->tasksModel->returnAllTasks();
+    }
 }
