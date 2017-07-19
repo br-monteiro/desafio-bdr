@@ -30,13 +30,12 @@ class UsuariosController extends AbstractController implements ControllerInterfa
 
     public function novo()
     {
-        $this->vw['usuarios'] = $this->usuariosModel->returnAllUsers();
-        $this->render('home.login');
+        $this->login();
     }
 
     public function login()
     {
-        $this->novo();
+        $this->vw['usuarios'] = $this->usuariosModel->returnAllUsers();
         $this->render('home.login');
     }
 }
