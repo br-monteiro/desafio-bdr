@@ -2,25 +2,18 @@
 
 /**
  * @author Edson B S Monteiro <bruno.monteirodg@gmail.com>
- * 
- * Resposta para questao FizzBuzz
- * 
- * LAUS DEO
+ * @param int $length - The length of array result
+ * @return array
  */
-function fizzBuzz($counter = 100)
+function fizzBuzz($length = 100)
 {
-
-    for ($i = 1; $i <= $counter; $i++) {
-
-        // verifica se eh múltiplo de 3
+    $result = [];
+    for ($i = 1; $i <= $length; $i++) {
         $fizz = $i % 3 == 0 ? 'Fizz' : null;
-        // verifica se eh múltiplo de 5
         $buzz = $i % 5 == 0 ? 'Buzz' : null;
-        // verifica se houve algum múltiplo detectado
-        $output = $fizz || $buzz ? $fizz . $buzz : $i;
-
-        echo $output . "<br />";
+        $result[] = $fizz || $buzz ? $fizz . $buzz : $i;
     }
+    return $result;
 }
 
-fizzBuzz();
+echo implode("<br>\n", fizzBuzz());
